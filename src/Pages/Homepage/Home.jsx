@@ -20,7 +20,7 @@ const Home = () => {
         <div style={{ backgroundImage: "radial-gradient(#7AD7F7, #92DFF3, #B7E9F7, #DBF3FA, #F5FCFF)"}} className= ' min-h-screen  h-full '>
             <div className='flex flex-col justify-center md:flex-row items-center min-h-screen w-[90%] h-full mx-auto'>
             {/* Left section */}
-            <div className='flex flex-col md:w-1/2 justify-center py-10 items-center '>
+            <div className='flex flex-col md:w-1/2 justify-center py-12 items-center '>
                 <h1 className=' text-3xl sm:text-5xl lg:text-6xl'>
                 Bookshop landing Page
                 </h1>
@@ -39,7 +39,7 @@ const Home = () => {
                 </div>
             </div>
             {/* Right section */}
-            <div className='flex md:w-1/2 justify-center py-10 items-center '>
+            <div className='flex md:w-1/2 justify-center md:py-10 items-center '>
                 <Swiper
                     effect={'cards'}
                     grabCursor={true}
