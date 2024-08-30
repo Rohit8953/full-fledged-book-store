@@ -8,9 +8,9 @@ import { CgClose } from "react-icons/cg";
 const Uploadbook = () => {
   const [popup,setpopup]=useState(false)
   return (
-    <main>
-      <div className='flex flex-row justify-between px-5 mt-8'>
-         <p>Uploaded Book By Seller</p>
+    <main className='relative'>
+      <div className='flex flex-row justify-between px-2 mt-8 '>
+         <p className='text-2xl sm:text-4xl text-gray-700 '>Uploaded Book By Seller</p>
          <button onClick={()=>setpopup(!popup)} className="px-3 py-2 bg-blue-400 text-white mb-10 hover:bg-blue-500 flex items-center justify-center gap-1">
              <p className="font-semibold">Upload Product</p>
           </button>
@@ -49,7 +49,6 @@ const Uploadbook = () => {
             </div>
             </div>
       </div>
-
           {/* >>>>>>>>>>> ---- product upload ----->>>>>>>> */}
           <div>
             {

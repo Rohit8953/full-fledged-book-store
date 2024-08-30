@@ -153,6 +153,7 @@ export const productsdata = [
   }
 ];
 
+
 export const newUpcommingBook = [
         {
           title: "The Great Gatsby",
@@ -331,23 +332,23 @@ export const data3=[
 export const faqsdata=[
   { 
     id:1,
-    question:"Lorem ipsum dolor sit amet?",
+    question:"consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie?",
     answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus."
   },{ 
     id:2,
-    question:"Lorem ipsum dolor sit amet?",
+    question:"Lconsectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie??",
     answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus."
   },{ 
     id:3,
-    question:"Lorem ipsum dolor sit amet?",
+    question:"consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie??",
     answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus."
   },{ 
     id:4,
-    question:"Lorem ipsum dolor sit amet?",
+    question:"consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie?",
     answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus."
   },{ 
     id:5,
-    question:"Lorem ipsum dolor sit amet?",
+    question:"consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie?",
     answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus."
   }
 ]

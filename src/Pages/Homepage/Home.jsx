@@ -1,16 +1,17 @@
 import React from 'react'
-import { useRef, useState } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 import PopulerCategory from './PopulerCategory';
-import Cards from "../../components/Cards/BestsellerCards"
+
 import UpcommingBook from './UpcommingBook';
 import FeaturedBook from './FeaturedBook';
 import Footer from './Footer';
 import Faqs from './Faqs';
 import Review from './Review';
+import BestsellerCards from '../../components/Cards/BestsellerCards';
 
 
 const Home = () => {
@@ -22,6 +23,9 @@ const Home = () => {
             <div className='flex flex-col md:w-1/2 justify-center py-10 items-center '>
                 <h1 className=' text-3xl sm:text-5xl lg:text-6xl'>
                 Bookshop landing Page
+                </h1>
+                <h1 className='mt-5 md:mt-8 text-start'>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et doloremque sed a repellat possimus ullam quaerat iusto delectus quas lorem dolorum!
                 </h1>
                 <div className='flex gap-5 mt-5 md:mt-8'>
                     <span>
@@ -78,10 +82,10 @@ const Home = () => {
         </div>
         <div>
             <PopulerCategory/>
-            <Cards/>
+            <BestsellerCards/>
             <UpcommingBook/>
             <FeaturedBook/>
-            <Review/>
+            {/* <Review/> */}
             <Faqs/>
             <Footer/>
         </div>

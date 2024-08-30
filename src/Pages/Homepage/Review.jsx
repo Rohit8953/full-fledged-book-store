@@ -14,6 +14,10 @@ const Review = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     initialSlide: 0,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,
@@ -35,18 +39,18 @@ const Review = () => {
     ],
   };
   return (
-    <section className="bg-white px-4 py-12 md:py-24 w-full flex  justify-center">
-      <div className="max-w-screen-xl mx-auto">
+    <section className="bg-white w-full  py-12 md:py-24 overflow-hidden flex justify-center">
+      <div className=" mx-auto">
         <h2 className="font-black text-gray-700 text-center text-2xl sm:text-4xl leading-none uppercase max-w-2xl mx-auto mb-12">
           What Listeners Are Saying
         </h2>
-        <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4 relative ">
-          <div className="w-[95vw] gap-10 mx-auto ">
+        <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row  gap-6 relative ">
+          <div className=" mx-auto w-[90vw]  space-x-3 gap-5 p-10 ">
             <Slider {...settings}>
               {costomerReveiw.map((data, index) => {
                 return (
                   <div key={index}>
-                    <div className=" flex flex-col bg-gray-200 rounded-lg p-8 text-center  mx-5 border-2 mb-8 overflow-hidden ">
+                    <div className="flex flex-col bg-gray-200 rounded-lg p-8  text-center w-fit border-2 mb-8  ">
                       <div className="flex flex-row items-center gap-2">
                         <img
                           src={data.image}

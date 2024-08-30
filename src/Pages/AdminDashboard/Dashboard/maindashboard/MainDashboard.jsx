@@ -75,7 +75,8 @@ const MainDashboard = () => {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="">
+      <h1 className='text-2xl sm:text-4xl text-gray-700 ml-6'>Real Time Data Analysis</h1>
       <div className="w-[80vw] h-[50vh] p-4">
         <ReactApexChart
           options={state.options}
@@ -85,7 +86,6 @@ const MainDashboard = () => {
           width="100%"
         />
       </div>
-      <div id="html-dist"></div>
     </div>
   );
 };

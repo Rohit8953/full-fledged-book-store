@@ -22,7 +22,7 @@ const Mainpage = () => {
   const popup=useSelector((store)=>store.userdetails.popup);
   console.log("popup",popup)
   return (
-      <div>
+      <div className='w-[100%] overflow-hidden'>
         <Navbar/>
          {
           popup &&(
