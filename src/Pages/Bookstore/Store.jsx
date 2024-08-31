@@ -10,6 +10,7 @@ import {
   Setlikecart,
 } from "../../Redux/productSlice";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Store = () => {
   const [openclose, setopenclose] = useState(false);
@@ -87,6 +88,17 @@ const Store = () => {
     dispatch(addproductDetails(product));
     navigate("/productdetail");
   };
+
+const clickaddtocart=(product)=>{
+  dispatch(Setaddtocart(product))
+  toast.success("Product added in cart")
+}
+
+const clickaddtowishlist=(product)=>{
+  dispatch(Setlikecart(product))
+  toast.success("Product added in wishlist")
+}
+
 
   return (
     <div>
@@ -226,14 +238,14 @@ const Store = () => {
 
                   <div className="flex flex-row justify-between items-center mb-4 ">
                     <button
-                      onClick={() => dispatch(Setaddtocart(product))}
+                      onClick={()=>clickaddtocart(product)}
                       className="text-sm bg-blue-400 hover:bg-blue-600 text-white px-3 py-0.5 rounded-full"
                     >
                       Add-to Cart
                     </button>
 
                     <button
-                      onClick={() => dispatch(Setlikecart(product))}
+                      onClick={()=>clickaddtowishlist(product)}
                       className="text-sm bg-blue-400 hover:bg-blue-600 text-white px-3 py-0.5 rounded-full"
                     >
                       WishList

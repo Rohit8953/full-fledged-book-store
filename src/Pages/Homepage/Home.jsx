@@ -21,10 +21,10 @@ const Home = () => {
             <div className='flex flex-col justify-center md:flex-row items-center min-h-screen w-[90%] h-full mx-auto'>
             {/* Left section */}
             <div className='flex flex-col md:w-1/2 justify-center py-12 items-center '>
-                <h1 className=' text-3xl sm:text-5xl lg:text-6xl'>
+                <h1 className=' text-3xl sm:text-5xl lg:text-6xl text-start'>
                 Bookshop landing Page
                 </h1>
-                <h1 className='mt-5 md:mt-8 text-start'>
+                <h1 className='mt-5 md:mt-8 lg:ml-6'>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et doloremque sed a repellat possimus ullam quaerat iusto delectus quas lorem dolorum!
                 </h1>
                 <div className='flex gap-5 mt-5 md:mt-8'>
@@ -78,7 +78,6 @@ const Home = () => {
             </div>
 
             </div>
-
         </div>
         <div>
             <PopulerCategory/>

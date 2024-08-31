@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PopUp from "../../components/Popup/PopUp";
 import { deletefromcart } from "../../Redux/productSlice";
+import toast from "react-hot-toast";
 
 const Addtocart = () => {
-  const [count, setcount] = useState(0);
+  const [count, setcount] = useState(1);
   const addtocartData = useSelector((state) => state.product.addtocartArray);
   const dispatch=useDispatch();
   console.log("add to cart array", addtocartData);
@@ -15,6 +16,14 @@ const Addtocart = () => {
       setcount(count-1);
     }
   }
+
+  const clickDeletfromCart=(data)=>{
+       dispatch(deletefromcart(data))
+       toast.success("Product deleted success")
+  }
+
+  var sum=0;
+
   return (
     <div>
       {addtocartData.length > "0" ? (
@@ -39,6 +48,7 @@ const Addtocart = () => {
                     </thead>
                     <tbody>
                       {addtocartData.map((data, index) => {
+                        sum=sum+data.price
                         return (
                           <tr key={data.id}>
                             <td class="py-4">{index + 1}</td>
@@ -52,7 +62,7 @@ const Addtocart = () => {
                                 <span class="font-semibold ">{data.title}</span>
                               </div>
                             </td>
-                            <td class="py-4">{data.price}</td>
+                            <td class="py-4">${data.price.toFixed(2)}</td>
                             <td class="py-4">
                               <div class="flex items-center justify-center">
                                 <button
@@ -72,9 +82,9 @@ const Addtocart = () => {
                                 </button>
                               </div>
                             </td>
-                            <td class="py-4">$19.99</td>
+                            <td class="py-4">${data.price.toFixed(2)}</td>
                             <td class="py-4 text-center">
-                              <button onClick={()=>dispatch(deletefromcart(data))} className="bg-green-100 p-2 rounded-full cursor-pointer hover:bg-green-500 hover:text-white">
+                              <button onClick={()=>clickDeletfromCart(data)} className="bg-green-100 p-2 rounded-full cursor-pointer hover:bg-green-500 hover:text-white">
                                 <MdDelete />
                               </button>
                             </td>
@@ -93,7 +103,7 @@ const Addtocart = () => {
                   <h2 class="text-lg font-semibold mb-4">Summary</h2>
                   <div class="flex justify-between mb-2">
                     <span>Subtotal</span>
-                    <span>$19.99</span>
+                    <span>${sum.toFixed(2)}</span>
                   </div>
                   <div class="flex justify-between mb-2">
                     <span>Taxes</span>
@@ -106,7 +116,7 @@ const Addtocart = () => {
                   {/* <hr class="my-2"> */}
                   <div class="flex justify-between mb-2">
                     <span class="font-semibold">Total</span>
-                    <span class="font-semibold">$21.98</span>
+                    <span class="font-semibold">{(sum+1.99).toFixed(2)}</span>
                   </div>
                   <Link
                     to="/placeorder"

@@ -17,7 +17,7 @@ import { useDispatch } from "react-redux"
     return (
       <Link  className="bg-white flex justify-center w-full">
         <div className="mx-auto w-[96%]  py-16  sm:py-24 sm:w-[90%] ">
-          <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-gray-900 text-center">Best Seller</h2>
+          <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-gray-900 text-center">Most Selling Book</h2>
           <div class="flex overflow-x-scroll pb-10 hide-scroll-bar mt-10 mx-auto">
           <div class="flex flex-nowrap gap-10">
             {productsdata.map((product) =>(

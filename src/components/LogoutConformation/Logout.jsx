@@ -1,12 +1,24 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Setpopup } from "../../Redux/userSlice";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Logout = () => {
+    const navigate=useNavigate()
  const dispatch=useDispatch();
+
+ const onclickhandler=()=>{
+    dispatch(Setpopup())
+    navigate('/')
+    toast.success("Logout success")
+ } 
+ const onclickForCancel=()=>{
+    dispatch(Setpopup())
+    navigate('/dashboard')
+ }
   return (
     <div>
-        
             <div class="fixed inset-0 z-40 min-h-full overflow-y-auto overflow-x-hidden transition flex items-center">
                 <div
                 aria-hidden="true"
@@ -45,11 +57,11 @@ const Logout = () => {
                         class="text-xl font-bold tracking-tight"
                         id="page-action.heading"
                         >
-                        Delete John Doe
+                        Delete LogedIn user name
                         </h2>
 
                         <p class="text-gray-500">
-                        Are you sure you would like to do this?
+                        Are you sure? You want to Logout?
                         </p>
                     </div>
                     </div>
@@ -65,7 +77,7 @@ const Logout = () => {
                             className="inline-flex items-center justify-center py-1 gap-1 font-medium rounded-lg border transition-colors outline-none  min-h-[2.25rem] px-4 text-sm text-gray-800 bg-white border-gray-300 hover:bg-gray-50 focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-600 dark:hover:border-gray-500 dark:text-gray-200 dark:focus:text-primary-400 dark:focus:border-primary-400 dark:focus:bg-gray-800"
                         >
                             <span class="flex items-center gap-1">
-                            <span class="">Cancel</span>
+                            <span onClick={onclickForCancel} class="">Cancel</span>
                             </span>
                         </button>
                         <button
@@ -73,7 +85,7 @@ const Logout = () => {
                             class="inline-flex items-center justify-center py-1 gap-1 font-medium rounded-lg border transition-colors outline-none  min-h-[2.25rem] px-4 text-sm text-white shadow focus:ring-white border-transparent bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 focus:ring-offset-blue-700"
                         >
                             <span class="flex items-center gap-1">
-                            <span class="">Confirm</span>
+                            <span onClick={onclickhandler} class="">Confirm</span>
                             </span>
                         </button>
                         </div>
