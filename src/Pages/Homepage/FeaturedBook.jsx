@@ -3,8 +3,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { featuredbook } from "../../Data/data";
+import { addproductDetails } from "../../Redux/productSlice";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
 
 const FeaturedBook = () => {
+  const navigate=useNavigate();
+  const dispatch=useDispatch()
   var settings = {
     dots: true,
     arrows: false,
@@ -19,9 +25,17 @@ const FeaturedBook = () => {
     pauseOnFocus: true,
   };
 
+  const clickhandler=(data)=>{
+       console.log("first", data);
+       dispatch(addproductDetails(data));
+       navigate("/productdetail");
+  }
+
   return (
-    <div className="min-h-screen flex flex-col items-center bg-blue-200 mt-20">
-      <h2 className="text-2xl font-bold tracking-tight text-gray-900 my-10 sm:text-4xl ">Featured Book</h2>
+    <div   style={{ backgroundImage: 'linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%)' }} className="min-h-screen  flex flex-col items-center  mt-20">
+      <h2 className="text-2xl font-bold tracking-tight text-gray-900 my-10 sm:text-4xl ">Featured Book
+ 
+      </h2>
       <div className="w-[100%]">
         <Slider {...settings}>
           {featuredbook.map((data, index) => {
@@ -42,7 +56,7 @@ const FeaturedBook = () => {
                     <p className="mt-3">{data.topic}</p>
                     <p className="mt-3">{data.description}</p>
                     <p className="mt-3">${data.price}</p>
-                    <button className="bg-white mt-6 w-fit p-2 border-2 rounded-3xl px-10 hover:bg-blue-400 hover:text-white transition-all duration-300">
+                    <button onClick={()=>clickhandler(data)} className="bg-white mt-6 w-fit p-2 border-2 rounded-3xl px-10 hover:bg-blue-400 hover:text-white transition-all duration-300">
                       VIEW MORE
                     </button>
                   </div>

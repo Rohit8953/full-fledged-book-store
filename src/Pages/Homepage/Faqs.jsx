@@ -5,14 +5,15 @@ import { faqsdata } from '../../Data/data'
 const Faqs = () => {
     const [clickedId,setclickedId]=useState();
     const [openclose,setopenclose]=useState(false)
-
+    
     const oclicked=(id)=>{
           setopenclose(!openclose)
           setclickedId(id);
     }
+
   return (
     <section className="w-full p-4 md:p-1">
-         <h2 className="text-2xl font-bold tracking-tight text-gray-900 text-center"> FAQ's </h2>
+         <h2 className="text-2xl font-bold tracking-tight text-gray-900 text-center mt-14"> FAQ's </h2>
         <ul className="max-w-4xl mx-auto my-12  shadow-gray-300 rounded-xl shadow-md">
             {
                 faqsdata.map((data,index)=>{

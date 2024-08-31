@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const [openmenue, setopenmenue] = useState(false);
   return (
-    <nav class="bg-slate-200 text-black fixed z-50  shadow-md w-full">
+    <nav class="bg-slate-50  text-black fixed z-50  shadow-md w-full">
       <div class="mx-auto max-w-7xl px-2 sm:px-3 lg:px-4">
         <div class="relative flex h-16 items-center justify-between">
 
@@ -58,30 +58,30 @@ const Navbar = () => {
 
               <div className="flex flex-row gap-5 items-center">
                 <Link to="/addtocart" className="relative">
-                  <div className="w-5 h-5 -top-3 -right-1 animate-bounce text-center text-white rounded-full absolute bg-green-600 ">
+                  <div className="w-5 h-5 -top-3 -right-1 animate-bounce text-center text-white rounded-full absolute bg-green-400 ">
                     {addtocartData.length}
                   </div>
-                  <FaCartArrowDown className="text-blue-500 text-2xl z-50" />
+                  <FaCartArrowDown className="text-blue-700 text-2xl z-50" />
                 </Link>
 
                 <Link to="/likecart" className="relative">
-                  <div className="w-5 h-5 -top-3 -right-1 text-center animate-ping text-white rounded-full absolute bg-green-600 ">
+                  <div className="w-5 h-5 -top-3 -right-1 text-center animate-ping text-white rounded-full absolute bg-green-400 ">
                     {likedcarts.length}
                   </div>
-                    <MdFavorite className="text-blue-500 text-2xl " />
+                    <MdFavorite className="text-blue-700 text-2xl " />
                 </Link>
               </div>
 
               <div className="hidden sm:block">
                 <Link to='/signup'>
-                  <button  class="p-1  px-3 rounded-lg border-2 border-blue-600  bg-blue-500 text-emerald-50 shadow-lg  hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-600">
+                  <button  class="p-1  px-3 rounded-lg border-2 border-blue-700  bg-blue-700 text-emerald-50 shadow-lg  hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-600">
                     Signup
                   </button>
                 </Link>
-                <button class="p-1 hidden  px-3 rounded-lg border-2  border-blue-600 bg-blue-500 text-emerald-50 shadow-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-600">
+                <button class="p-1 hidden  px-3 rounded-lg border-2  border-blue-700 bg-blue-700 text-emerald-50 shadow-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-600">
                   Login
                 </button>
-                <button class="p-1 hidden px-3 rounded-lg border-2 border-blue-600 bg-blue-500 text-emerald-50 shadow-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-600">
+                <button class="p-1 hidden px-3 rounded-lg border-2 border-blue-700 bg-blue-700 text-emerald-50 shadow-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-600">
                   Logout
                 </button>
               </div>

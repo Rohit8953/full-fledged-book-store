@@ -118,7 +118,7 @@ export const productsdata = [
     price: 22.99,
     category: "History",
     description: "An exploration of the history of the human species, from the Stone Age to the modern age.",
-    image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
+    image: "https://timpeake.com/wp-content/uploads/2023/04/Tim-Peake-Space-Human-Story-Book-Cover-1@2x.png",
     availability: "In Stock"
   },
   {
@@ -138,7 +138,7 @@ export const productsdata = [
     price: 11.99,
     category: "Fiction",
     description: "A story about teenage alienation and angst, narrated by the iconic protagonist Holden Caulfield.",
-    image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
+    image: "https://timpeake.com/wp-content/uploads/2023/04/Tim-Peake-Space-Human-Story-Book-Cover-1@2x.png",    
     availability: "In Stock"
   },
   {
@@ -148,7 +148,7 @@ export const productsdata = [
     price: 17.99,
     category: "History",
     description: "A guide to building good habits and breaking bad ones with practical strategies.",
-    image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
+    image: "https://timpeake.com/wp-content/uploads/2023/04/Tim-Peake-Space-Human-Story-Book-Cover-1@2x.png",
     availability: "In Stock"
   }
 ];

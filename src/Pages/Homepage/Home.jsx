@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { GoCheckCircle } from "react-icons/go";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
@@ -20,21 +20,33 @@ const Home = () => {
         <div style={{ backgroundImage: "radial-gradient(#7AD7F7, #92DFF3, #B7E9F7, #DBF3FA, #F5FCFF)"}} className= ' min-h-screen  h-full '>
             <div className='flex flex-col justify-center md:flex-row items-center min-h-screen w-[90%] h-full mx-auto'>
             {/* Left section */}
-            <div className='flex flex-col md:w-1/2 justify-center py-12 items-center '>
+            <div className='flex flex-col md:w-1/2 justify-center py-12 items-startr '>
                 <h1 className=' text-3xl sm:text-5xl lg:text-6xl text-start'>
                 Bookshop landing Page
                 </h1>
-                <h1 className='mt-5 md:mt-8 lg:ml-6'>
+                <h1 className='mt-5 md:mt-8'>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et doloremque sed a repellat possimus ullam quaerat iusto delectus quas lorem dolorum!
                 </h1>
-                <div className='flex gap-5 mt-5 md:mt-8'>
+                <div className='flex gap-5 mt-5 md:mt-8 text-start'>
                     <span>
-                        <p>Lorem, ipsum dolor.</p>
-                        <p>Lorem, ipsum dolor.</p>
+                        <span className='flex flex-row items-center gap-2 '>
+                          <GoCheckCircle className='' />
+                          <p> Lorem, ipsum dolor.</p>
+                        </span>
+                        <span className='flex flex-row items-center gap-2 '>
+                          <GoCheckCircle className='' />
+                          <p> Lorem, ipsum dolor.</p>
+                        </span>
                     </span>
                     <span>
-                        <p>Lorem, ipsum dolor.</p>
-                        <p>Lorem, ipsum dolor.</p>
+                        <span className='flex flex-row items-center gap-2 '>
+                          <GoCheckCircle className='' />
+                          <p> Lorem, ipsum dolor.</p>
+                        </span>
+                        <span className='flex flex-row items-center gap-2 '>
+                          <GoCheckCircle className='' />
+                          <p> Lorem, ipsum dolor.</p>
+                        </span>
                     </span>
                 </div>
             </div>
@@ -84,7 +96,7 @@ const Home = () => {
             <BestsellerCards/>
             <UpcommingBook/>
             <FeaturedBook/>
-            {/* <Review/> */}
+            <Review/>
             <Faqs/>
             <Footer/>
         </div>

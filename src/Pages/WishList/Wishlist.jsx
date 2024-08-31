@@ -25,7 +25,7 @@ const Wishlist = () => {
       !likedcarts.length > 0 ? (
         <PopUp />
       ) : (
-        <div className="w-full bg-gray-100 h-full">
+        <div className="w-full bg-gray-100 h-full pt-20">
           <div className=" h-full min-h-screen w-[80%]  mx-auto">
             <div className="pt-12 grid grid-cols-1 items-center gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
               {likedcarts.map((product) => (

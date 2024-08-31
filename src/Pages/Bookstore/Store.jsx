@@ -54,7 +54,9 @@ const Store = () => {
       setData(productsdata);
     }
   }, [searchitems]);
+ 
 
+  // category bassed filter
   const onChecked = (id, value, isChecked) => {
     if (isChecked) {
       setCheckedValues((prev) => {
@@ -71,6 +73,7 @@ const Store = () => {
     }
   };
 
+  
   useEffect(() => {
     if (checkedValues.length > 0) {
       const filterdata = productsdata.filter((item) =>
