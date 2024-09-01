@@ -204,15 +204,15 @@ const clickaddtowishlist=(product)=>{
         {/* right section > cards */}
 
         <div className=" h-[100vh]  overflow-y-scroll hide-scroll-bar flex justify-center mx-auto">
-        <div className="pt-1 grid grid-cols-1 items-center gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3  xl:gap-x-8">
+        <div className="pt-1 grid grid-cols-1 items-center gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3  xl:gap-x-8">
             {cardData.map((product) => (
               <div
                 key={product.id}
-                className="group relative rounded-lg bg-white shadow-md p-2 max-w-xs"
+                className="group relative cursor-pointer rounded-lg bg-white shadow-md p-2 max-w-xs"
               >
                 <div
                   onClick={() => onclickOnProduct(product)}
-                  className="aspect-h-1 aspect-w-1 w-full overflow-hidden lg:aspect-none group-hover:opacity-75 lg:h-80"
+                  className="aspect-h-1 aspect-w-1 w-full overflow-hidden lg:aspect-none group-hover:brightness-110 transition-all duration-300 lg:h-80"
                 >
                   <img
                     alt={product.image}
@@ -233,7 +233,7 @@ const clickaddtowishlist=(product)=>{
                       <p className="mt-1 text-sm text-gray-500">
                         {product.author}
                       </p>
-                      <p className="text-sm font-medium text-gray-900">
+                      <p className="text-sm font-medium text-blue-600">
                         {product.price}$
                       </p>
                     </span>
@@ -242,7 +242,7 @@ const clickaddtowishlist=(product)=>{
                   <div className="flex flex-row justify-between items-center mb-4 ">
                     <button
                       onClick={()=>clickaddtocart(product)}
-                      className="text-sm bg-blue-400 hover:bg-blue-600 text-white px-3 py-0.5 rounded-full"
+                      className="text-sm bg-blue-400 hover:bg-blue-600 text-white px-3 py-0.5 flex-nowrap  rounded-full"
                     >
                       Add-to Cart
                     </button>

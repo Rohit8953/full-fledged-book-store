@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 import PopulerCategory from './PopulerCategory';
-
+import flowchart from '../../Data/assets/flowchart.png'
 import UpcommingBook from './UpcommingBook';
 import FeaturedBook from './FeaturedBook';
 import Footer from './Footer';
@@ -28,22 +28,22 @@ const Home = () => {
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et doloremque sed a repellat possimus ullam quaerat iusto delectus quas lorem dolorum!
                 </h1>
                 <div className='flex gap-5 mt-5 md:mt-8 text-start'>
-                    <span>
-                        <span className='flex flex-row items-center gap-2 '>
+                    <span className='flex flex-col gap-5'>
+                         <span className='flex flex-row items-center gap-2 animate-[bounce_3s_linear_infinite] bg-white px-4 py-2 md:py-3 text-xs md:text-base text-gray-500 rounded-l-lg rounded-br-3xl shadow-md'>
                           <GoCheckCircle className='' />
                           <p> Lorem, ipsum dolor.</p>
                         </span>
-                        <span className='flex flex-row items-center gap-2 '>
+                        <span className='flex flex-row items-center gap-2 animate-[bounce_3s_linear_infinite] bg-white px-4 py-2 md:py-3 text-xs md:text-base text-gray-500 rounded-l-lg rounded-tr-3xl shadow-md'>
                           <GoCheckCircle className='' />
                           <p> Lorem, ipsum dolor.</p>
                         </span>
                     </span>
-                    <span>
-                        <span className='flex flex-row items-center gap-2 '>
+                    <span className='flex flex-col gap-5'>
+                        <span className='flex flex-row items-center gap-2 animate-[bounce_3s_linear_infinite] bg-white px-4 py-2 md:py-3 text-xs md:text-base text-gray-500 rounded-r-lg rounded-bl-3xl shadow-md'>
                           <GoCheckCircle className='' />
                           <p> Lorem, ipsum dolor.</p>
                         </span>
-                        <span className='flex flex-row items-center gap-2 '>
+                        <span className='flex flex-row items-center gap-2 animate-[bounce_3s_linear_reverse_infinite] bg-white px-4 py-2 md:py-3 text-xs md:text-base text-gray-500 rounded-r-lg rounded-tl-3xl shadow-md'>
                           <GoCheckCircle className='' />
                           <p> Lorem, ipsum dolor.</p>
                         </span>
@@ -91,6 +91,9 @@ const Home = () => {
 
             </div>
         </div>
+         <div className='flex flex-row justify-center items-center max-w-4xl mt-10 px-2 mx-auto'>
+            <img src={flowchart} alt="" className='object-cover w-full'/>
+         </div>
         <div>
             <PopulerCategory/>
             <BestsellerCards/>

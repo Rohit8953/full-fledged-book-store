@@ -78,7 +78,8 @@ export const productsdata = [
     category: "Fiction",
     description: "A classic novel set in the Roaring Twenties, telling the story of Jay Gatsby's unrequited love for Daisy Buchanan.",
     image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
-    availability: "In Stock"
+    availability: "In Stock",
+    productcount:1,
   },
   {
     id:'3',
@@ -88,7 +89,8 @@ export const productsdata = [
     category: "Programming",
     description: "A deep dive into the best features of JavaScript, covering syntax, objects, functions, inheritance, and more.",
     image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
-    availability: "Out of Stock"
+    availability: "Out of Stock",
+    productcount:1,
   },
   {
     id:'4',
@@ -98,7 +100,8 @@ export const productsdata = [
     category: "Biography",
     description: "An intimate, powerful, and inspiring memoir by the former First Lady of the United States, Michelle Obama.",
     image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
-    availability: "In Stock"
+    availability: "In Stock",
+    productcount:1,
   },
   {
     id:'5',
@@ -108,7 +111,8 @@ export const productsdata = [
     category: "Business",
     description: "A guide to starting and managing successful startups with a focus on rapid prototyping and customer feedback.",
     image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
-    availability: "In Stock"
+    availability: "In Stock",
+    productcount:1,
   },
   {
     id:'6',
@@ -118,7 +122,8 @@ export const productsdata = [
     category: "Fiction",
     description: "A novel about the serious issues of race and rape, told through the eyes of young Scout Finch in the 1930s South.",
     image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
-    availability: "In Stock"
+    availability: "In Stock",
+    productcount:1,
   },
   {
     id:'7',
@@ -128,7 +133,8 @@ export const productsdata = [
     category: "Programming",
     description: "A handbook of agile software craftsmanship, focusing on writing clean, readable, and maintainable code.",
     image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
-    availability: "In Stock"
+    availability: "In Stock",
+    productcount:1,
   },
   {
     id:'8',
@@ -138,7 +144,8 @@ export const productsdata = [
     category: "Dystopian",
     description: "A chilling novel that portrays a totalitarian society under constant surveillance and control.",
     image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
-    availability: "In Stock"
+    availability: "In Stock",
+    productcount:1,
   },
   {
     id:'9',
@@ -148,7 +155,8 @@ export const productsdata = [
     category: "History",
     description: "An exploration of the history of the human species, from the Stone Age to the modern age.",
     image: "https://timpeake.com/wp-content/uploads/2023/04/Tim-Peake-Space-Human-Story-Book-Cover-1@2x.png",
-    availability: "In Stock"
+    availability: "In Stock",
+    productcount:1,
   },
   {
     id:'10',
@@ -158,7 +166,8 @@ export const productsdata = [
     category: "History",
     description: "A classic novel about the manners and matrimonial machinations of British society in the early 19th century.",
     image: "https://i0.wp.com/s3-bucket-golpapa-offload-media-mumbai.s3.ap-south-1.amazonaws.com/wp-content/uploads/20211101045833/3D-Children_Stories_From_Mummy-s_Fantasy_Land-by-Obenro_Mozhui-English-Short-Story-Hardcover-1.png?fit=800%2C800&ssl=1",
-    availability: "Out of Stock"
+    availability: "Out of Stock",
+    productcount:1,
   },
   {
     id:'11',
@@ -168,20 +177,21 @@ export const productsdata = [
     category: "Fiction",
     description: "A story about teenage alienation and angst, narrated by the iconic protagonist Holden Caulfield.",
     image: "https://timpeake.com/wp-content/uploads/2023/04/Tim-Peake-Space-Human-Story-Book-Cover-1@2x.png",    
-    availability: "In Stock"
+    availability: "In Stock",
+    productcount:1,
   },
   {
     id:'12',
     title: "Atomic Habits",
     author: "James Clear",
-    price: 17.99,
+    price: 17.01,
     category: "History",
     description: "A guide to building good habits and breaking bad ones with practical strategies.",
     image: "https://timpeake.com/wp-content/uploads/2023/04/Tim-Peake-Space-Human-Story-Book-Cover-1@2x.png",
-    availability: "In Stock"
+    availability: "In Stock",
+    productcount:1,
   }
 ];
-
 
 export const newUpcommingBook = [
         {
@@ -292,7 +302,8 @@ export const featuredbook = [
           topic:"Lorem ipsum dolor sit.",
           description: "A classic novel set in the Roaring Twenties, telling the story of Jay Gatsby's unrequited love for Daisy Buchanan.",
           image: "https://m.media-amazon.com/images/I/61T4DIm0c5L._AC_UF1000,1000_QL80_.jpg",
-          availability: "In Stock"
+          availability: "In Stock",
+          productcount:1,
         },
         {
           title: "JavaScript: The Good Parts",
@@ -303,7 +314,8 @@ export const featuredbook = [
           description: "A deep dive into the best features of JavaScript, covering syntax, objects, functions, inheritance, and more.",
           image: "https://m.media-amazon.com/images/I/61T4DIm0c5L._AC_UF1000,1000_QL80_.jpg",
           url: "https://example.com/products/js-good-parts",
-          availability: "Out of Stock"
+          availability: "Out of Stock",
+          productcount:1,
         },
         {
           title: "Becoming",
@@ -314,7 +326,8 @@ export const featuredbook = [
           description: "An intimate, powerful, and inspiring memoir by the former First Lady of the United States, Michelle Obama.",
           image: "https://m.media-amazon.com/images/I/61T4DIm0c5L._AC_UF1000,1000_QL80_.jpg",
           url: "https://example.com/products/becoming",
-          availability: "In Stock"
+          availability: "In Stock",
+          productcount:1,
         },
         {
           title: "The Lean Startup",
@@ -324,7 +337,8 @@ export const featuredbook = [
           topic:"Lorem ipsum dolor sit.",
           description: "A guide to starting and managing successful startups with a focus on rapid prototyping and customer feedback.",
           image: "https://m.media-amazon.com/images/I/61T4DIm0c5L._AC_UF1000,1000_QL80_.jpg",
-          availability: "In Stock"
+          availability: "In Stock",
+          productcount:1,
         },
         {
           title: "The Lean Startup",
@@ -334,7 +348,8 @@ export const featuredbook = [
           topic:"Lorem ipsum dolor sit.",
           description: "A guide to starting and managing successful startups with a focus on rapid prototyping and customer feedback.",
           image: "https://m.media-amazon.com/images/I/61T4DIm0c5L._AC_UF1000,1000_QL80_.jpg",
-          availability: "In Stock"
+          availability: "In Stock",
+          productcount:1,
         },
       ]
 

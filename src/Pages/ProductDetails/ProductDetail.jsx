@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {Setaddtocart } from "../../Redux/productSlice";
-
+import {Setaddtocart, Setlikecart } from "../../Redux/productSlice";
+import { FaRegStar, FaStar } from "react-icons/fa6";
 const ProductDetail=()=>{
     const dispatch=useDispatch()
     const productdetail=useSelector(state=>state.product.productdetails)
     
     console.log("rp",productdetail)
+
+
   return (
     <main class="dark:bg-gray-800 bg-white relative overflow-hidden h-full pb-10 p-3">
       <div class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
@@ -24,7 +26,7 @@ const ProductDetail=()=>{
               <button onClick={()=>dispatch(Setaddtocart(productdetail))} class="uppercase py-2 px-4 rounded-lg bg-blue-500 border-2 border-transparent text-white text-md mr-4 hover:bg-blue-400">
                 Add-To-Cart
               </button>
-              <button class="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-blue-500 text-blue-500 dark:text-white hover:bg-blue-500 hover:text-white text-md">
+              <button  onClick={()=>dispatch(Setlikecart(productdetail))} class="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-blue-500 text-blue-500 dark:text-white hover:bg-blue-500 hover:text-white text-md">
                 Wishlist
               </button>
             </div>
@@ -38,8 +40,6 @@ const ProductDetail=()=>{
           </div>
         </div>
       </div>
-
-
 
       {/* user reviews --- */}
       <div class="flex items-start">
@@ -68,122 +68,32 @@ const ProductDetail=()=>{
             <span class="ml-2 text-green-600 text-xs">Verified Buyer</span>
           </p>
           <div class="flex items-center mt-1">
-            <svg
-              class="w-4 h-4 fill-current text-yellow-600"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-            </svg>
-            <svg
-              class="w-4 h-4 fill-current text-yellow-600"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-            </svg>
-            <svg
-              class="w-4 h-4 fill-current text-yellow-600"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-            </svg>
-            <svg
-              class="w-4 h-4 fill-current text-yellow-600"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-            </svg>
-            <svg
-              class="w-4 h-4 fill-current text-gray-400"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-            </svg>
+                       <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaRegStar className="text-yellow-500" />
           </div>
           <div class="flex flex-col items-start sm:flex-row sm:items-center mt-4 text-gray-600">
             <div class="flex items-center">
               <span class="text-sm">Product Quality</span>
               <div class="flex items-center ml-2">
-                <svg
-                  class="w-3 h-3 fill-current text-yellow-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
-                <svg
-                  class="w-3 h-3 fill-current text-yellow-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
-                <svg
-                  class="w-3 h-3 fill-current text-yellow-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
-                <svg
-                  class="w-3 h-3 fill-current text-yellow-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
-                <svg
-                  class="w-3 h-3 fill-current text-gray-400"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaRegStar className="text-yellow-500" />
               </div>
             </div>
 
             <div class="flex items-center ">
               <span class="text-sm">Purchasing Experience</span>
               <div class="flex items-center ml-2">
-                <svg
-                  class="w-3 h-3 fill-current text-yellow-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
-                <svg
-                  class="w-3 h-3 fill-current text-yellow-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
-                <svg
-                  class="w-3 h-3 fill-current text-yellow-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
-                <svg
-                  class="w-3 h-3 fill-current text-gray-400"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
-                <svg
-                  class="w-3 h-3 fill-current text-gray-400"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500" />
+                        <FaRegStar className="text-yellow-500" />
               </div>
             </div>
 

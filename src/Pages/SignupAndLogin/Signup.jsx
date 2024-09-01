@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as Yup from "yup";
+import signuppage from '../../Data/assets/signuppage.jpg'
 const Signup = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -58,17 +59,15 @@ const Signup = () => {
   };
   console.log("form data", formData, "errorrrrr", errors);
   return (
-    <div class="h-screen md:flex">
-      <div class="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center hidden">
-
-        <div class="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-        <div class="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-        <div class="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-        <div class="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+    <div class=" h-full md:h-screen md:flex md:justify-around ">
+      <div className=" w-full sm:w-[70%] md:w-1/2 mt-12 md:mt-0 mx-auto  flex flex-row justify-center items-center">
+          <img src={signuppage} alt="" className="object-contain" />
       </div>
-          {/* signup form */}
-      <div class="flex min-h-screen md:mt-1 md:w-1/2 justify-center py-10 items-center bg-white">
-        <form onSubmit={handleSubmit} class="bg-white">
+
+      {/* signup form */}
+
+      <div class="flex md:w-1/2 justify-center py-1 md:py-10 items-center md:mt-10 bg-white">
+      <form onSubmit={handleSubmit} class="bg-white w-full max-w-xs p-4 md:p-1">
           <h1 class="text-gray-800 font-bold text-2xl ml-1 mb-1">Hello Again!</h1>
           <p class="text-sm font-normal text-gray-600 ml-1 mb-7">Welcome Back</p>
 
@@ -152,7 +151,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
               </div>
-              {errors && <div className="text-red-500 mb-3 text-sm font-normal ml-2">{errors.password}</div>}
+              {errors && <div className="text-red-500 mb-3 text-sm font-normal ml-2 line-clamp-1">{errors.password}</div>}
             </div>
 
             <div className="flex flex-col">
@@ -178,7 +177,7 @@ const Signup = () => {
                   className="outline-none bg-white"
                 />
               </div>
-              {errors && <div className="text-red-500 mb-3 text-sm font-normal ml-2">{errors.confirmPassword}</div>}
+              {errors && <div className="text-red-500 mb-3 text-sm font-normal ml-2 line-clamp-1">{errors.confirmPassword}</div>}
             </div>
           </div>
 

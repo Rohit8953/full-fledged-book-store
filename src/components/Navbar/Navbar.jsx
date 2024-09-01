@@ -5,7 +5,8 @@ import { RxCross2 } from "react-icons/rx";
 import { MdFavorite } from "react-icons/md";
 import { FaCartArrowDown } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import Booklogo from '../../Data/assets/Booklogo.jpg'
+import BookstoreLogo from '../../Data/assets/bookstoreLogo.jpg'
+
 
 const Navbar = () => {
   const addtocartData = useSelector((state) => state.product.addtocartArray);
@@ -14,26 +15,26 @@ const Navbar = () => {
   const [openmenue, setopenmenue] = useState(false);
   return (
     <nav class="bg-slate-50  text-black fixed z-50  shadow-md w-full">
-      <div class="mx-auto max-w-7xl px-2 sm:px-3 lg:px-4">
+      <div class="mx-auto max-w-[1350px] px-4 sm:px-6 md:px-16 lg:px-10 xl:px-0 ">
         <div class="relative flex h-16 items-center justify-between">
 
 
        <div class="flex flex-1 flex-row justify-between items-center">
 
-            <div class="flex flex-shrink-0 items-center">
+            <Link to="/" class="flex flex-shrink-0 items-center cursor-pointer">
               <img
-                class="h-8 w-auto"
-                src={Booklogo}
-                alt="Your Company"
+                class="h-12 w-auto"
+                src={BookstoreLogo}
+                alt="Your Company "
               />
-            </div>
+            </Link>
 
 
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
                 <Link
                   to="/"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-blue-700 hover:text-white"
+                  class="rounded-md px-3 border-2 border-dotted border-gray-400 py-2 text-sm font-medium text-black hover:bg-blue-700 hover:text-white"
                   aria-current="page"
                 >
                   Explore
@@ -41,20 +42,20 @@ const Navbar = () => {
 
                 <Link
                   to="/store"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-blue-700 hover:text-white"
+                  class="rounded-md px-3 py-2 border-2 border-dotted border-gray-400 text-sm font-medium text-black hover:bg-blue-700 hover:text-white"
                 >
                   Book Store
                 </Link>
                 <Link
                   to="/dashboard"
-                  class="rounded-md px-3 py-2 text-sm font-medium   text-black hover:bg-blue-700 hover:text-white"
+                  class="rounded-md px-3 py-2 text-sm font-medium  border-2 border-dotted border-gray-400 text-black hover:bg-blue-700 hover:text-white"
                 >
                   Dashboard
                 </Link>
               </div>
             </div>
 
-            <div className="flex flex-row gap-6 md:gap-16">
+            <div className="flex flex-row gap-5 md:gap-10">
 
               <div className="flex flex-row gap-5 items-center">
                 <Link to="/addtocart" className="relative">

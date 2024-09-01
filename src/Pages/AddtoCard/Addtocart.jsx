@@ -3,14 +3,14 @@ import { MdDelete, MdElectricMoped } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PopUp from "../../components/Popup/PopUp";
-import { deletefromcart } from "../../Redux/productSlice";
+import { decreaseCount, deletefromcart, increaseCount } from "../../Redux/productSlice";
 import toast from "react-hot-toast";
 
 const Addtocart = () => {
   const [count, setcount] = useState(1);
   const addtocartData = useSelector((state) => state.product.addtocartArray);
   const dispatch=useDispatch();
-  console.log("add to cart array", addtocartData);
+
   const decrement=()=>{
     if (count>1) {
       setcount(count-1);
@@ -48,7 +48,7 @@ const Addtocart = () => {
                     </thead>
                     <tbody>
                       {addtocartData.map((data, index) => {
-                        sum=sum+data.price
+                        sum=sum+(data.price)*(data.productcount)
                         return (
                           <tr key={data.id}>
                             <td class="py-4">{index + 1}</td>
@@ -66,23 +66,23 @@ const Addtocart = () => {
                             <td class="py-4">
                               <div class="flex items-center justify-center">
                                 <button
-                                  onClick={decrement}
+                                  onClick={()=>dispatch(decreaseCount(index))}
                                   class="border rounded-md  px-2 mr-1 sm:py-1 sm:px-3 sm:mr-1 md:py-2 md:px-4 md:mr-2"
                                 >
                                   -
                                 </button>
                                 <span class="text-center w-4 sm:w-6 md:w-8">
-                                  {count}
+                                  {data.productcount}
                                 </span>
                                 <button
-                                  onClick={() => setcount(count + 1)}
+                                  onClick={()=>dispatch(increaseCount(index))}
                                   class="border rounded-md px-2 mr-1 sm:py-1 sm:px-3 sm:mr-1 md:py-2 md:px-4 md:mr-2"
                                 >
                                   +
                                 </button>
                               </div>
                             </td>
-                            <td class="py-4">${data.price.toFixed(2)}</td>
+                            <td class="py-4">${((data.price)*(data.productcount)).toFixed(2)}</td>
                             <td class="py-4 text-center">
                               <button onClick={()=>clickDeletfromCart(data)} className="bg-green-100 p-2 rounded-full cursor-pointer hover:bg-green-500 hover:text-white">
                                 <MdDelete />

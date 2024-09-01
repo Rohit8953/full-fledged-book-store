@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as Yup from "yup";
-
+import loginpage from '../../Data/assets/loginpage.jpg'
 const Signup = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -51,25 +51,18 @@ const Signup = () => {
   };
 
   return (
-    <div class="h-screen md:flex">
-
-      <div class="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center hidden">
-       
-        <div class="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-        <div class="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-        <div class="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-        <div class="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+    <div class=" h-full md:h-screen md:flex md:justify-around ">
+      <div className=" w-full sm:w-[70%] md:w-1/2 mt-12 md:mt-0 mx-auto  flex flex-row justify-center items-center">
+        <img src={loginpage} alt="" className=" object-contain" />
       </div>
 
-      <div class="flex md:w-1/2 justify-center py-10 items-center min-h-screen bg-white">
-        <form onSubmit={handleSubmit} class="bg-white">
+      <div class="flex md:w-1/2 justify-center py-1 md:py-10 items-center bg-white">
+        <form onSubmit={handleSubmit} class="bg-white w-full max-w-xs p-4 md:p-1">
           <h1 class="text-gray-800 font-bold text-2xl mb-1">Hello Again!</h1>
           <p class="text-sm font-normal text-gray-600 mb-7">Welcome Back</p>
-          <div className="flex flex-col gap-3">
-
-
-            <div className="flex flex-col">
-              <div class="flex items-center border-2 py-2 px-3 rounded-2xl">
+          <div className="flex flex-col gap-3 max-w-lg">
+            <div className="flex flex-col max-w-lg">
+              <div class="flex items-center border-2 py-2 px-3 w-full  rounded-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5 text-gray-400"
@@ -87,7 +80,7 @@ const Signup = () => {
                 <input
                   type="email"
                   name="email"
-                  className="outline-none"
+                  className="outline-none w-full"
                   value={formData.email}
                   placeholder="Enter your email"
                   onChange={handleChange}
@@ -97,7 +90,7 @@ const Signup = () => {
             </div>
 
             <div className="flex flex-col">
-              <div class="flex items-center border-2 py-2 px-3 rounded-2xl">
+              <div class="flex items-center border-2 py-2 px-3 rounded-2xl w-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5 text-gray-400"

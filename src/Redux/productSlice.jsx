@@ -47,9 +47,17 @@ const productsSlice = createSlice({
     
     addproductDetails:(state,action)=>{
         state.productdetails=action.payload
+    },
+    increaseCount:(state,action)=>{
+        state.addtocartArray[action.payload].productcount=state.addtocartArray[action.payload].productcount+1;
+    },
+    decreaseCount:(state,action)=>{
+      if (state.addtocartArray[action.payload].productcount>1) {
+        state.addtocartArray[action.payload].productcount=state.addtocartArray[action.payload].productcount-1;
+      }
     }
   },
 });
 
-export const { Setaddtocart ,addproductDetails,Setlikecart,deletefromcart,deletefromlike} = productsSlice.actions;
+export const { Setaddtocart,increaseCount ,decreaseCount ,addproductDetails,Setlikecart,deletefromcart,deletefromlike} = productsSlice.actions;
 export default productsSlice.reducer;
