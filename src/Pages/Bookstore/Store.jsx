@@ -104,8 +104,8 @@ const clickaddtowishlist=(product)=>{
 
 
   return (
-    <div>
-      <div className="mt-24 mb-3 mx-auto text-gray-600 w-fit flex flex-row justify-between items-center  border-2 border-gray-300 bg-white h-10 px-5 rounded-lg text-sm ">
+    <div className="bg-gray-100 py-24 ">
+      <div className=" mb-3 mx-auto text-gray-600 w-fit flex flex-row justify-between items-center  border-2 border-gray-300 bg-white h-10 px-5 rounded-lg text-sm ">
         <input
           className="focus:outline-none"
           onChange={(e) => setsearchitems(e.target.value)}
@@ -116,10 +116,10 @@ const clickaddtowishlist=(product)=>{
         <FiSearch className="text-gray-500 h-4 w-4" />
       </div>
 
-      <div className="flex flex-col sm:flex-row w-full gap-6">
+      <div className="flex flex-col sm:flex-row w-full sm:justify-around gap-4 p-2 ">
         {/* left section > filter */}
-        <div className="max-w-6xl ml-5 sm:ml-1 sm:mx-auto">
-          <form class="mt-4  ">
+        <div className=" mx-2  sm:ml-1 sm:mx-auto  bg-white shadow-md rounded-md px-0 sm:px-5 md:px-10 lg:px-16">
+          <form class="mt-4 ">
             <div className="">
               <h3 className="text-base px-4 py-4 uppercase font-medium text-slate-500 border-b border-gray-200">
                 Sort by Price
@@ -165,7 +165,7 @@ const clickaddtowishlist=(product)=>{
                   <span class="text-base uppercase font-medium text-slate-500 ">
                     Categrory
                   </span>
-                  <span>{openclose ? <LuMinus /> : <GoPlus />}</span>
+                  <span>{openclose ? <LuMinus className="text-2xl" /> : <GoPlus className="text-2xl" />}</span>
                 </button>
               </h3>
               <div
@@ -203,12 +203,12 @@ const clickaddtowishlist=(product)=>{
 
         {/* right section > cards */}
 
-        <div className=" h-[100vh] overflow-y-scroll flex justify-center mx-auto">
-          <div className="mt-6  grid grid-cols-1 mx-auto items-center justify-center  gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+        <div className=" h-[100vh]  overflow-y-scroll hide-scroll-bar flex justify-center mx-auto">
+        <div className="pt-1 grid grid-cols-1 items-center gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3  xl:gap-x-8">
             {cardData.map((product) => (
               <div
                 key={product.id}
-                className="group relative bg-gray-50  max-w-xs mx-auto shadow-md rounded-md"
+                className="group relative rounded-lg bg-white shadow-md p-2 max-w-xs"
               >
                 <div
                   onClick={() => onclickOnProduct(product)}

@@ -3,41 +3,70 @@ import twitter from "./assets/twitter.png"
 import instagram from "./assets/instagram.png"
 import github from "./assets/github.png"
 import linkedin from "./assets/linkedin.png"
+import Placeorder from "../Pages/PlaceOrder/Placeorder"
+import Payment from "../Pages/Payments/Payment"
+import Delivery from "../Pages/ProductDelivery/Delivery"
+import CustomerInfo from "../Pages/Customer/CustomerInfo"
+
+
+
+export const Componentsdata = [
+  { 
+    id:1,
+    name: "Customer Info",
+    Component:<CustomerInfo/>,
+  },
+  {
+    id:2,
+    name: "Shipping Info",
+    Component: <Placeorder/>,
+  },
+  {
+    id:3,
+    name: "Payment",
+    Component:<Payment/>,
+  },
+  {
+    id:4,
+    name: "Delivery Info",
+    Component:<Delivery/>,
+  },
+];
 
 export const data=[
-    {
-        id:'1',
-        image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
-        category:'History'
-    },{
-        id:'2',
-        image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
-        category:'Dystopian'
-    },{
-        id:'3',
-        image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
-        category:'Programming'
-    },{
-        id:'4',
-        image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
-        category:'Business'
-    },{
-        id:'5',
-        image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
-        category:'Fiction'
-    },{
-        id:'6',
-        image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
-        category:'Biography'
-    },{
-        id:'6',
-        image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
-        category:'Biography'
-    },{
-        id:'6',
-        image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
-        category:'Biography'
-    },
+  {
+      id:'1',
+      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      category:'History'
+  },{
+      id:'2',
+      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      category:'Dystopian'
+  },{
+      id:'3',
+      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      category:'Programming'
+  },{
+      id:'4',
+      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      category:'Business'
+  },{
+      id:'5',
+      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      category:'Fiction'
+  },{
+      id:'6',
+      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      category:'Biography'
+  },{
+      id:'6',
+      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      category:'Biography'
+  },{
+      id:'6',
+      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      category:'Biography'
+  },
 ]
 
 export const productsdata = [

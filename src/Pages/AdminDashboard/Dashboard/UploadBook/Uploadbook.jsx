@@ -19,17 +19,17 @@ const Uploadbook = () => {
             <div className=" h-[100vh] overflow-y-scroll">
             <div className="mt-6  grid grid-cols-1 items-center gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
                 {productsdata.map((product) => (
-                <div key={product.id} className="group relative rounded-lg">
-                    <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden  bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <div key={product.id} className="group relative rounded-lg bg-gray-50 shadow-md p-2 max-w-xs">
+                    <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden   lg:aspect-none group-hover:opacity-75 lg:h-80">
                     <img
                         alt={product.image}
                         src={product.image}
-                        className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                        className="h-full w-full object-cover object-center bg-blend-multiply lg:h-full lg:w-full"
                     />
                     </div>
 
-                    <div className=" flex flex-col justify-between bg-blue-100 p-2">
-                    <div className="mt-4 p-2">
+                    <div className=" flex flex-col justify-between bg-slate-50 p-2">
+                    <div className="mt-4 ">
                         <h3 className=" text-gray-700 text-xl line-clamp-1">
                         {product.title}
                         </h3>
@@ -39,7 +39,7 @@ const Uploadbook = () => {
                     </div>
 
                     <div className="flex flex-row justify-between items-center ">
-                        <p className="text-sm font-medium text-gray-900">
+                        <p className="text-sm font-medium text-gray-700">
                         {product.price}$
                         </p>
                     </div>

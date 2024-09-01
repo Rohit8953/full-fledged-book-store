@@ -7,8 +7,8 @@ const Bookmanagement = () => {
     <div class="flex flex-col">
       <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
         <div class="py-2 inline-block min-w-full">
-          <div class="overflow-hidden">
-            <table class="min-w-full">
+          <div class="overflow-hidden shadow-sm rounded-md">
+            <table class="min-w-full ">
               <thead class="bg-gray-100 border-b">
                 <tr>
                   <th

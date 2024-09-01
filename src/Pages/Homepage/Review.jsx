@@ -18,7 +18,7 @@ const Review = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    responsive: [
+    responsive: [ 
       {
         breakpoint: 1024,
         settings: {

@@ -17,6 +17,7 @@ import Addtocart from '../Pages/AddtoCard/Addtocart'
 import Placeorder from '../Pages/PlaceOrder/Placeorder'
 import ProductDetail from '../Pages/ProductDetails/ProductDetail'
 import Wishlist from '../Pages/WishList/Wishlist'
+import MultiStepper from '../Pages/MultiSteppers/MultiStepper'
 
 const Mainpage = () => {
   const popup=useSelector((store)=>store.userdetails.popup);
@@ -36,7 +37,7 @@ const Mainpage = () => {
             <Route path='/store' element={<Store/>}/>
             <Route path='/addtocart' element={<Addtocart/>}/>
             <Route path='/likecart' element={<Wishlist/>}/>
-            <Route path='/placeorder' element={<Placeorder/>}/>
+            <Route path='/placeorder' element={<MultiStepper/>}/>
             <Route path='/productdetail' element={<ProductDetail/>}/>  
             <Route path='/dashboard' element={<DashBoard/>}>  
                 <Route path='/dashboard' element={<MainDashboard/>}/>
