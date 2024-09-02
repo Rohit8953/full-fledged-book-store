@@ -75,9 +75,9 @@ const MainDashboard = () => {
   };
 
   return (
-    <div className="">
-      <h1 className='text-2xl sm:text-4xl text-gray-700 ml-6'>Real Time Data Analysis</h1>
-      <div className="w-[80vw] h-[50vh] p-4">
+    <div className=" bg-white shadow-md h-full max-h-[100vh] md:max-h-[80vh]">
+      <h1 className='text-xl sm:text-4xl text-gray-700 ml-6'>Real Time Data Analysis</h1>
+      <div className= "w-full md:w-[80vw] h-full p-4 pb-10">
         <ReactApexChart
           options={state.options}
           series={state.series}

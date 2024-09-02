@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-
+import toast from 'react-hot-toast';
 
 const productsSlice = createSlice({
   name: 'product',
@@ -19,6 +19,7 @@ const productsSlice = createSlice({
       );
       if (!itemExist) {
         state.likecartArray.push(action.payload);
+        toast.success("Product added in wishlist")
       }
     },
 
@@ -29,6 +30,7 @@ const productsSlice = createSlice({
 
       if (!itemExists) {
         state.addtocartArray.push(action.payload);
+        toast.success("Product added in cart");
       }
     },
 
@@ -43,6 +45,7 @@ const productsSlice = createSlice({
       state.likecartArray = state.likecartArray.filter(
         (item) => item.id !== action.payload.id
       );
+      toast.success("Product deleted from wishlist");
     },
     
     addproductDetails:(state,action)=>{

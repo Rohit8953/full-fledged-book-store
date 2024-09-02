@@ -18,25 +18,6 @@ const Review = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    responsive: [ 
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 700,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-    ],
   };
   return (
     <section className="bg-white w-full  py-12 md:py-24 overflow-hidden flex justify-center">

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import * as Yup from "yup";
 import loginpage from '../../Data/assets/loginpage.jpg'
+import { Link, useNavigate } from "react-router-dom";
 const Signup = () => {
+  const navigate=useNavigate()
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -32,6 +34,7 @@ const Signup = () => {
     try {
       const data=await validationSchema.validate(formData, { abortEarly: false });
       console.log("Form Submitted", formData,data);
+      navigate("/")
     } catch (error) {
       const newErrors = {};
       console.log("error is there", error);
@@ -114,10 +117,7 @@ const Signup = () => {
               </div>
               {errors && <div className="text-red-500 mb-3 text-sm font-normal ml-2">{errors.password}</div>}
             </div>
-
           </div>
-
-
           <button
             type="submit"
             class="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"
@@ -126,6 +126,11 @@ const Signup = () => {
           </button>
           <span class="text-sm ml-2 hover:text-blue-500 cursor-pointer">
             Forgot Password ?
+          </span>
+          <br />
+          <span class="text-sm ml-2 mt-1 flex flex-row gap-2 ">
+             <p>Create account</p>
+             <Link to='/signup' className="text-blue-500 cursor-pointer">Signup</Link>
           </span>
         </form>
       </div>

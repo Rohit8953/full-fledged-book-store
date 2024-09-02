@@ -10,7 +10,6 @@ import PopUp from "../../components/Popup/PopUp";
 
 const Wishlist = () => {
   const likedcarts = useSelector((state) => state.product.likecartArray);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const onclickOnProduct = (product) => {

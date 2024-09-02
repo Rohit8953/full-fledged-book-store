@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as Yup from "yup";
 import signuppage from '../../Data/assets/signuppage.jpg'
+import { Link, useNavigate } from "react-router-dom";
 const Signup = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -8,7 +9,7 @@ const Signup = () => {
     password: "",
     confirmPassword: "",
   });
-
+  const navigate=useNavigate();
   const [errors, setErrors] = useState();
 
   const validationSchema = Yup.object({
@@ -30,7 +31,7 @@ const Signup = () => {
       .matches(/[a-z]/, "Password must contain at least one lowercase letter"),
 
     confirmPassword: Yup.string()
-      .oneOf([Yup.ref("password")], "Passwords must match")
+      .oneOf([Yup.ref("password")], "Password didn't match")
       .required("Confirm password is required"),
   });
 
@@ -39,6 +40,7 @@ const Signup = () => {
     try {
       await validationSchema.validate(formData, { abortEarly: false });
       console.log("Form Submitted", formData);
+      navigate('/login')
     } catch (error) {
       const newErrors = {};
       console.log("error is there", error);
@@ -57,15 +59,13 @@ const Signup = () => {
       [name]: value,
     });
   };
-  console.log("form data", formData, "errorrrrr", errors);
+
   return (
     <div class=" h-full md:h-screen md:flex md:justify-around ">
       <div className=" w-full sm:w-[70%] md:w-1/2 mt-12 md:mt-0 mx-auto  flex flex-row justify-center items-center">
           <img src={signuppage} alt="" className="object-contain" />
       </div>
-
       {/* signup form */}
-
       <div class="flex md:w-1/2 justify-center py-1 md:py-10 items-center md:mt-10 bg-white">
       <form onSubmit={handleSubmit} class="bg-white w-full max-w-xs p-4 md:p-1">
           <h1 class="text-gray-800 font-bold text-2xl ml-1 mb-1">Hello Again!</h1>
@@ -187,10 +187,11 @@ const Signup = () => {
           >
             Signup
           </button>
-          <span class="text-sm ml-2 hover:text-blue-500 cursor-pointer">
-            Forgot Password ?
+          <span class="text-sm ml-2 mt-1 flex flex-row gap-2 ">
+             <p>You have already account</p>
+             <Link to='/login' className="text-blue-500 cursor-pointer">Login</Link>
           </span>
-        </form>
+      </form>
       </div>
     </div>
   );

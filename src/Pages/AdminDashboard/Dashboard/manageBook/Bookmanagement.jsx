@@ -5,7 +5,7 @@ import { productsdata } from "../../../../Data/data";
 const Bookmanagement = () => {
   return (
     <div class="flex flex-col">
-      <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
+      <div class="overflow-x-auto overflow-y-auto h-[100vh] hide-scroll-bar sm:mx-0.5 lg:mx-0.5">
         <div class="py-2 inline-block min-w-full">
           <div class="overflow-hidden shadow-sm rounded-md">
             <table class="min-w-full ">

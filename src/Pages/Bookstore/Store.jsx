@@ -47,8 +47,6 @@ const Store = () => {
           item.title.toLowerCase().includes(searchitems.toLowerCase()) ||
           item.author.toLowerCase().includes(searchitems.toLowerCase())
       );
-
-      console.log("data is there", filterdata, searchitems);
       setData(filterdata);
     } else {
       setData(productsdata);
@@ -85,7 +83,6 @@ const Store = () => {
     }
   }, [checkedValues]);
 
-  console.log("add to cart data is there", addtocartData);
 
   const onclickOnProduct = (product) => {
     dispatch(addproductDetails(product));
@@ -94,12 +91,12 @@ const Store = () => {
 
 const clickaddtocart=(product)=>{
   dispatch(Setaddtocart(product))
-  toast.success("Product added in cart")
+  
 }
 
 const clickaddtowishlist=(product)=>{
   dispatch(Setlikecart(product))
-  toast.success("Product added in wishlist")
+
 }
 
 
@@ -217,6 +214,7 @@ const clickaddtowishlist=(product)=>{
                   <img
                     alt={product.image}
                     src={product.image}
+                    loading="lazy"
                     className="h-full w-full  object-center lg:h-full lg:w-full mix-blend-multiply"
                   />
                 </div>

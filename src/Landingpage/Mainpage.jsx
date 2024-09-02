@@ -14,10 +14,10 @@ import Profile from '../Pages/AdminDashboard/Dashboard/Profile/Profile'
 import Logout from '../components/LogoutConformation/Logout'
 import { useSelector } from 'react-redux'
 import Addtocart from '../Pages/AddtoCard/Addtocart'
-import Placeorder from '../Pages/PlaceOrder/Placeorder'
 import ProductDetail from '../Pages/ProductDetails/ProductDetail'
 import Wishlist from '../Pages/WishList/Wishlist'
 import MultiStepper from '../Pages/MultiSteppers/MultiStepper'
+import Paymentdetail from '../Pages/AdminDashboard/Dashboard/PaymentDetails/Paymentdetail'
 
 const Mainpage = () => {
   const popup=useSelector((store)=>store.userdetails.popup);
@@ -44,6 +44,7 @@ const Mainpage = () => {
                 <Route path='/dashboard/uploadbook' element={<Uploadbook/>}/>
                 <Route path='/dashboard/bookmanage' element={<Bookmanagement/>}/>
                 <Route path='/dashboard/manageuser' element={<UserManagement/>}/>
+                <Route path='/dashboard/paymentmanage' element={<Paymentdetail/>}/>
                 <Route path='/dashboard/profile' element={<Profile/>}/>
             </Route>
         </Routes>

@@ -8,7 +8,126 @@ import Payment from "../Pages/Payments/Payment"
 import Delivery from "../Pages/ProductDelivery/Delivery"
 import CustomerInfo from "../Pages/Customer/CustomerInfo"
 
-
+export const paymentDetaildata=[
+  {
+    id: 1,
+    image: "https://example.com/image1.jpg",
+    name: "John Doe",
+    bookName: "The Great Gatsby",
+    date: "2024-09-01",
+    paymentStatus: "Paid",
+    color:'#00eb7a'
+  },
+  {
+    id: 2,
+    image: "https://example.com/image2.jpg",
+    name: "Jane Smith",
+    bookName: "To Kill a Mockingbird",
+    date: "2024-09-02",
+    paymentStatus: "Pending",
+    color:'#ffba01'
+  },
+  {
+    id: 3,
+    image: "https://example.com/image3.jpg",
+    userName: "alice_johnson",
+    name: "Alice Johnson",
+    bookName: "1984",
+    date: "2024-09-03",
+    paymentStatus: "Cancelled",
+    color:'#eb0000'
+  },
+  {
+    id: 4,
+    image: "https://example.com/image4.jpg",
+    userName: "bob_brown",
+    name: "Bob Brown",
+    bookName: "Moby Dick",
+    date: "2024-09-04",
+    paymentStatus: "Paid",
+    color:'#00eb7a'
+  },
+  {
+    id: 5,
+    image: "https://example.com/image5.jpg",
+    userName: "carol_white",
+    name: "Carol White",
+    bookName: "Pride and Prejudice",
+    date: "2024-09-05",
+    paymentStatus: "Cancelled",
+    color:'#eb0000'
+  },
+  {
+    id: 6,
+    image: "https://example.com/image6.jpg",
+    userName: "david_wilson",
+    name: "David Wilson",
+    bookName: "War and Peace",
+    date: "2024-09-06",
+    paymentStatus: "Paid",
+    color:'#00eb7a'
+  },
+  {
+    id: 7,
+    image: "https://example.com/image7.jpg",
+    userName: "eve_davis",
+    name: "Eve Davis",
+    bookName: "The Catcher in the Rye",
+    date: "2024-09-07",
+    paymentStatus: "Pending",
+    color:'#ffba01'
+  },
+  {
+    id: 8,
+    image: "https://example.com/image8.jpg",
+    userName: "frank_miller",
+    name: "Frank Miller",
+    bookName: "The Hobbit",
+    date: "2024-09-08",
+    paymentStatus: "Cancelled",
+    color:'#eb0000'
+  },
+  {
+    id: 9,
+    image: "https://example.com/image9.jpg",
+    userName: "grace_lee",
+    name: "Grace Lee",
+    bookName: "Jane Eyre",
+    date: "2024-09-09",
+    paymentStatus: "Pending",
+    color:'#ffba01'
+  },
+  {
+    id: 10,
+    image: "https://example.com/image10.jpg",
+    userName: "henry_martin",
+    name: "Henry Martin",
+    bookName: "The Odyssey",
+    date: "2024-09-10",
+    paymentStatus: "Paid",
+    color:'#00eb7a'
+  },
+  {
+    id: 11,
+    image: "https://example.com/image11.jpg",
+    userName: "ivy_king",
+    name: "Ivy King",
+    bookName: "The Iliad",
+    date: "2024-09-11",
+    paymentStatus: "Cancelled",
+    color:'#eb0000'
+  },
+  {
+    id: 12,
+    image: "https://example.com/image12.jpg",
+    userName: "jack_carter",
+    name: "Jack Carter",
+    bookName: "Brave New World",
+    date: "2024-09-12",
+    paymentStatus: "Paid",
+    color:'#00eb7a'
+  }
+];
 
 export const Componentsdata = [
   { 
@@ -36,35 +155,35 @@ export const Componentsdata = [
 export const data=[
   {
       id:'1',
-      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      image:"https://www.shutterstock.com/image-vector/space-stunning-font-futuristic-logo-260nw-1933324259.jpg",
       category:'History'
   },{
       id:'2',
-      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      image:"https://www.shutterstock.com/image-vector/space-stunning-font-futuristic-logo-260nw-1933324259.jpg",
       category:'Dystopian'
   },{
       id:'3',
-      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      image:"https://www.shutterstock.com/image-vector/space-stunning-font-futuristic-logo-260nw-1933324259.jpg",
       category:'Programming'
   },{
       id:'4',
-      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      image:"https://www.shutterstock.com/image-vector/space-stunning-font-futuristic-logo-260nw-1933324259.jpg",
       category:'Business'
   },{
       id:'5',
-      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      image:"https://www.shutterstock.com/image-vector/space-stunning-font-futuristic-logo-260nw-1933324259.jpg",
       category:'Fiction'
   },{
       id:'6',
-      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      image:"https://www.shutterstock.com/image-vector/space-stunning-font-futuristic-logo-260nw-1933324259.jpg",
       category:'Biography'
   },{
       id:'6',
-      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      image:"https://www.shutterstock.com/image-vector/space-stunning-font-futuristic-logo-260nw-1933324259.jpg",
       category:'Biography'
   },{
       id:'6',
-      image:"https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+      image:"https://www.shutterstock.com/image-vector/space-stunning-font-futuristic-logo-260nw-1933324259.jpg",
       category:'Biography'
   },
 ]
@@ -200,7 +319,7 @@ export const newUpcommingBook = [
           price: 10.99,
           category: "Fiction",
           description: "A classic novel set in the Roaring Twenties, telling the story of Jay Gatsby's unrequited love for Daisy Buchanan.",
-          image: "https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+          image: "https://images.squarespace-cdn.com/content/v1/5ecc6ffe34b76f25d60fb2c3/1602000489594-9K5870VIH1PIR1DI3XZL/image-asset.jpeg",
 
           availability: "In Stock"
         },
@@ -210,7 +329,7 @@ export const newUpcommingBook = [
           price: 25.50,
           category: "Programming",
           description: "A deep dive into the best features of JavaScript, covering syntax, objects, functions, inheritance, and more.",
-          image: "https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+          image: "https://images.squarespace-cdn.com/content/v1/5ecc6ffe34b76f25d60fb2c3/1601976539615-UA8ZWSQBDLR9ZAC2ZHY1/Marte-Trilogy-3-spines-B-Mockup.jpg",
         
           availability: "Out of Stock"
         },
@@ -220,7 +339,7 @@ export const newUpcommingBook = [
           price: 18.99,
           category: "Biography",
           description: "An intimate, powerful, and inspiring memoir by the former First Lady of the United States, Michelle Obama.",
-          image: "https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+          image: "https://images.squarespace-cdn.com/content/v1/5ecc6ffe34b76f25d60fb2c3/1602000489594-9K5870VIH1PIR1DI3XZL/image-asset.jpeg",
           
           availability: "In Stock"
         },
@@ -230,7 +349,7 @@ export const newUpcommingBook = [
           price: 16.99,
           category: "Business",
           description: "A guide to starting and managing successful startups with a focus on rapid prototyping and customer feedback.",
-          image: "https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+          image: "https://images.squarespace-cdn.com/content/v1/5ecc6ffe34b76f25d60fb2c3/1602000489594-9K5870VIH1PIR1DI3XZL/image-asset.jpeg",
 
           availability: "In Stock"
         },
@@ -240,7 +359,7 @@ export const newUpcommingBook = [
           price: 12.99,
           category: "Fiction",
           description: "A novel about the serious issues of race and rape, told through the eyes of young Scout Finch in the 1930s South.",
-          image: "https://example.com/images/to-kill-a-mockingbird.jpg",
+          image: "https://images.squarespace-cdn.com/content/v1/5ecc6ffe34b76f25d60fb2c3/1601976539615-UA8ZWSQBDLR9ZAC2ZHY1/Marte-Trilogy-3-spines-B-Mockup.jpg",
     
           availability: "In Stock"
         },
@@ -250,7 +369,7 @@ export const newUpcommingBook = [
           price: 29.99,
           category: "Programming",
           description: "A handbook of agile software craftsmanship, focusing on writing clean, readable, and maintainable code.",
-          image: "https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+          image: "https://images.squarespace-cdn.com/content/v1/5ecc6ffe34b76f25d60fb2c3/1602000489594-9K5870VIH1PIR1DI3XZL/image-asset.jpeg",
       
           availability: "In Stock"
         },
@@ -260,7 +379,7 @@ export const newUpcommingBook = [
           price: 22.99,
           category: "History",
           description: "An exploration of the history of the human species, from the Stone Age to the modern age.",
-          image: "https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+          image: "https://images.squarespace-cdn.com/content/v1/5ecc6ffe34b76f25d60fb2c3/1601976539615-UA8ZWSQBDLR9ZAC2ZHY1/Marte-Trilogy-3-spines-B-Mockup.jpg",
       
           availability: "In Stock"
         },
@@ -270,27 +389,10 @@ export const newUpcommingBook = [
           price: 9.99,
           category: "Romance",
           description: "A classic novel about the manners and matrimonial machinations of British society in the early 19th century.",
-          image: "https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
+          image: "https://images.squarespace-cdn.com/content/v1/5ecc6ffe34b76f25d60fb2c3/1602000489594-9K5870VIH1PIR1DI3XZL/image-asset.jpeg",
           availability: "Out of Stock"
         },
-        {
-          title: "The Catcher in the Rye",
-          author: "J.D. Salinger",
-          price: 11.99,
-          category: "Fiction",
-          description: "A story about teenage alienation and angst, narrated by the iconic protagonist Holden Caulfield.",
-          image: "https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
-          availability: "In Stock"
-        },
-        {
-          title: "Atomic Habits",
-          author: "James Clear",
-          price: 17.99,
-          category: "Self-Help",
-          description: "A guide to building good habits and breaking bad ones with practical strategies.",
-          image: "https://www.wolf.at/app/uploads/2017/07/liawolf_978-988-13-2042-1_0078-1600x1067.jpg",
-          availability: "In Stock"
-        }
+       
       ];
 
 export const featuredbook = [

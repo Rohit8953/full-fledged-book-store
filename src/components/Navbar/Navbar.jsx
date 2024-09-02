@@ -142,9 +142,11 @@ const Navbar = () => {
           >
             Book Store
           </Link>
-          <Link  onClick={() => setopenmenue(!openmenue)} to='/dashboard' class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-blue-700 hover:text-white"
-          >
+          <Link  onClick={() => setopenmenue(!openmenue)} to='/dashboard' class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-blue-700 hover:text-white">
             Your Profile
+          </Link>
+          <Link to='/signup' onClick={() => setopenmenue(!openmenue)} class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-blue-700 hover:text-white">
+            Signup
           </Link>
         </div>
       </div>

@@ -12,6 +12,10 @@ const UpcommingBook = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,
@@ -41,7 +45,6 @@ const UpcommingBook = () => {
   }
    
 
-
   return (
     <div>
         <p className='text-4xl my-5 text-center'>Upcomming Book</p>
@@ -56,11 +59,13 @@ const UpcommingBook = () => {
                                 <div >
                                     <img className='h-[10rem] w-[100%]' src={data.image} alt="" />
                                 </div>
-                                <div className='p-2'>
-                                    <p className='font-bold text-xl line-clamp-1'>{data.title}</p>
-                                    <p>{data.author}</p>
+                                <div className='flex flex-row w-full items-start justify-between'>
+                                  <div className='p-2'>
+                                      <p className='font-bold text-xl line-clamp-1'>{data.title}</p>
+                                      <p>{data.author}</p>
+                                  </div>
+                                  <p className='p-2 text-green-900'>{data.price}$</p>
                                 </div>
-                                <p className='p-2'>{data.price}$</p>
                             </div>
                           </div>
                       )
