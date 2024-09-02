@@ -17,8 +17,8 @@ import BestsellerCards from '../../components/Cards/BestsellerCards';
 const Home = () => {
   return (
     <section className=''>
-        <div style={{ backgroundImage: "radial-gradient(#7AD7F7, #92DFF3, #B7E9F7, #DBF3FA, #F5FCFF)"}} className= ' min-h-screen  h-full '>
-            <div className='flex flex-col justify-center md:flex-row items-center min-h-screen w-[90%] h-full mx-auto'>
+        <div style={{ backgroundImage: "radial-gradient(#7AD7F7, #92DFF3, #B7E9F7, #DBF3FA, #F5FCFF)"}} className= ' min-h-screen  h-full py-10 '>
+            <div className='flex flex-col  justify-center md:flex-row items-center min-h-screen w-[90%] h-full mx-auto'>
             {/* Left section */}
             <div className='flex flex-col md:w-1/2 justify-center py-12 items-startr '>
                 <h1 className=' text-3xl sm:text-5xl lg:text-6xl text-start'>

@@ -7,7 +7,6 @@ import { FaCartArrowDown } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import BookstoreLogo from '../../Data/assets/bookstoreLogo.jpg'
 
-
 const Navbar = () => {
   const addtocartData = useSelector((state) => state.product.addtocartArray);
   const likedcarts = useSelector((state) => state.product.likecartArray);
@@ -133,24 +132,22 @@ const Navbar = () => {
         id="mobile-menu"
       >
         <div class="space-y-1 px-2 pb-3 pt-2">
-          <Link to='/' className="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-blue-700 hover:text-white"
+          <Link  onClick={() => setopenmenue(!openmenue)} to='/' className="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-blue-700 hover:text-white"
             aria-current="page"
           >
             Explor
           </Link>
         
-          <Link to='/store' class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-blue-700 hover:text-white"
+          <Link  onClick={() => setopenmenue(!openmenue)} to='/store' class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-blue-700 hover:text-white"
           >
             Book Store
           </Link>
-          <Link to='/dashboard' class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-blue-700 hover:text-white"
+          <Link  onClick={() => setopenmenue(!openmenue)} to='/dashboard' class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-blue-700 hover:text-white"
           >
             Your Profile
           </Link>
         </div>
       </div>
-
-
     </nav>
   );
 };
